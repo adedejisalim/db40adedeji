@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  
+  - let result = [{name:"Pasta", color:"white", rating:8}, {name:"Jollof-rice", color:"orange", rating:9}, {name:"Ramen", color:"yellow", rating:8}]
+  div(class="container-fluid")
+    div(class="row")
+    each value in result 
+        div(class="col-sm-2") Name: #{value.name} Color: #{value.color} Rating: #{value.rating}
