@@ -23,7 +23,7 @@ router.put('/resource/foods/:id',
 food_controller.food_update_put); 
  
 // GET request for one Costume. 
-router.get('/resource/foods/:id', food_controller.food_detail); 
+router.get('/foods/:id', food_controller.food_detail); 
  
 // GET request for list of all Costume items. 
 router.get('/foods', food_controller.food_list); 
