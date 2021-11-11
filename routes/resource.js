@@ -13,7 +13,7 @@ router.get('/', api_controller.api);
 /// FOOD ROUTES /// 
  
 // POST request for creating a Costume.  
-router.post('/resource/foods', food_controller.food_create_post); 
+router.post('/foods', food_controller.food_create_post); 
  
 // DELETE request to delete Costume. 
 router.delete('/resource/foods/:id', food_controller.food_delete); 
@@ -26,6 +26,6 @@ food_controller.food_update_put);
 router.get('/resource/foods/:id', food_controller.food_detail); 
  
 // GET request for list of all Costume items. 
-router.get('/resource/foods', food_controller.food_list); 
+router.get('/foods', food_controller.food_list); 
  
 module.exports = router;
