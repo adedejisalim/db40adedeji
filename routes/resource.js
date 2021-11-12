@@ -26,6 +26,9 @@ food_controller.food_update_put);
 router.get('/foods/:id', food_controller.food_detail); 
  
 // GET request for list of all Costume items. 
-router.get('/foods', food_controller.food_list); 
+router.get('/foods', food_controller.food_list);
+
+/* GET detail costume page */ 
+router.get('/detail', food_controller.food_view_one_Page); 
  
 module.exports = router;

@@ -12,6 +12,21 @@ exports.food_list = async function(req, res) {
     }  
 };
 
+// Handle a show one view with id specified by query 
+exports.food_view_one_Page = async function(req, res) { 
+    console.log("single view for id "  + req.query.id) 
+    try{ 
+        result = await Food.findById(req.query.id)
+        console.log(result) 
+        res.render('fooddetail',  
+{ title: 'Food Detail', toShow: result }); 
+    } 
+    catch(err){ 
+        res.status(500) 
+        res.send(`{'error': '${err}'}`); 
+    } 
+};
+
 // Handle a show all view 
 exports.food_view_all_Page = async function(req, res) { 
     try{ 

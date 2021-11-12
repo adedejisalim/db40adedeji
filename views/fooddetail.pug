@@ -1,0 +1,22 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  - let foodid = toShow._id 
+  - let food_name = toShow.name
+  - let foodcolor = toShow.color 
+  - let foodrating = toShow.rating 
+  div 
+    div.row 
+      div(class='foodAttr mr-3') Food ID is: 
+      div #{foodid} 
+    div.row 
+      div(class='foodAttr mr-3') Food Name is: 
+      div #{food_name} 
+    div.row 
+      div(class='foodAttr mr-3') Food Color is: 
+      div #{foodcolor} 
+    div.row 
+      div(class='foodAttr mr-3') Food Rating is: 
+      div #{foodrating}
