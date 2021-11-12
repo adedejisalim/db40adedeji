@@ -16,10 +16,10 @@ router.get('/', api_controller.api);
 router.post('/foods', food_controller.food_create_post); 
  
 // DELETE request to delete Costume. 
-router.delete('/resource/foods/:id', food_controller.food_delete); 
+router.delete('/foods/:id', food_controller.food_delete); 
  
 // PUT request to update Costume. 
-router.put('/resource/foods/:id', 
+router.put('/foods/:id', 
 food_controller.food_update_put); 
  
 // GET request for one Costume. 
