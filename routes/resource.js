@@ -33,5 +33,8 @@ router.get('/detail', food_controller.food_view_one_Page);
 
 /* GET create costume page */ 
 router.get('/create', food_controller.food_create_Page);
+
+/* GET create update page */ 
+router.get('/update', food_controller.food_update_Page);
  
 module.exports = router;
