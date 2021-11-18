@@ -94,6 +94,20 @@ exports.food_delete = async function(req, res) {
         res.status(500) 
         res.send(`{"error": Error deleting ${err}}`); 
     }
+};
+
+// Handle a delete one view with id from query 
+exports.food_delete_Page = async function(req, res) { 
+    console.log("Delete view for id "  + req.query.id) 
+    try{ 
+        result = await Food.findById(req.query.id) 
+        res.render('fooddelete', { title: 'Food Delete', toShow: 
+result }); 
+    } 
+    catch(err){ 
+        res.status(500) 
+        res.send(`{'error': '${err}'}`); 
+    } 
 }; 
  
 // Handle Food update form on PUT. 

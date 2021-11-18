@@ -28,13 +28,16 @@ router.get('/foods/:id', food_controller.food_detail);
 // GET request for list of all Costume items. 
 router.get('/foods', food_controller.food_list);
 
-/* GET detail costume page */ 
+/* GET detail food page */ 
 router.get('/detail', food_controller.food_view_one_Page); 
 
-/* GET create costume page */ 
+/* GET create food page */ 
 router.get('/create', food_controller.food_create_Page);
 
-/* GET create update page */ 
+/* GET create food page */ 
 router.get('/update', food_controller.food_update_Page);
+
+/* GET create food page */ 
+router.get('/delete', food_controller.food_delete_Page);
  
 module.exports = router;
