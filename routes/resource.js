@@ -1,6 +1,14 @@
 var express = require('express'); 
 var router = express.Router(); 
 
+const secured = (req, res, next) => { 
+    if (req.user){ 
+      return next(); 
+    } 
+    req.session.returnTo = req.originalUrl; 
+    res.redirect("/login"); 
+  }
+
 // Require controller modules. 
 var api_controller = require('../controllers/api'); 
 var food_controller = require('../controllers/food'); 
@@ -35,7 +43,7 @@ router.get('/detail', food_controller.food_view_one_Page);
 router.get('/create', food_controller.food_create_Page);
 
 /* GET create food page */ 
-router.get('/update', food_controller.food_update_Page);
+router.get('/update', secured, food_controller.food_update_Page);
 
 /* GET create food page */ 
 router.get('/delete', food_controller.food_delete_Page);
